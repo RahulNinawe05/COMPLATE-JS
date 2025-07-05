@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom video 4 is this</title>
+</head>
+
+<body style="background-color: #212121; color: white">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    // practice
+
+    function notionh1(Rahul) {
+        const heading = document.createElement("h1");
+        heading.appendChild(document.createTextNode(Rahul));
+        document.body.appendChild(heading);
+    }
+
+    // notionh1("thisis"); // ✅ Add semicolon
+
+
+    function notionh1(text1, text2) {
+        const heading = document.createElement("h1");
+
+        heading.appendChild(document.createTextNode(text1 + " "));
+        heading.appendChild(document.createTextNode(text2));
+
+        document.body.appendChild(heading);
+    }
+    // notionh1("Chai", "Aur Code");
+
+
+    function notion(siername) {
+        const h2 = document.createElement("h2")
+        h2.innerHTML = `${siername}`
+        document.querySelector(".Thish2").appendChild(h2)
+
+    }
+    // notion("Ninawe")
+
+    // ******************************
+
+    function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+        document.querySelector(".language").appendChild(li);
+    }
+    // addLanguage("python");
+    // addLanguage("c++");
+
+    function addOptiLanguag(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    // addOptiLanguag('Advanced Python')
+    // addOptiLanguag('Advanced c++')
+    // addOptiLanguag('Advanced java')
+
+    // edit
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newLi = document.createElement('li')
+    newLi.textContent = "tyscript"
+    // secondLang.replaceWith(newLi)
+
+    //    edit
+
+    const firstchild = document.querySelector('li:first-child')
+    firstchild.outerHTML = "<li>Rahul</li>"
+    // console.log(firstchild);
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+    // console.log(lastLang);
+</script>
+
+</html>

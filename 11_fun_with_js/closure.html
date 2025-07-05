@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+
+<body style="background-color: #212121;">
+    <button id="orange">Orange</button>
+    <button id="green">green</button>
+</body>
+
+<script>
+    // function init() {
+    //     let name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // Lexical scoping
+
+    // function outer() {
+    //     let username = "rahul"
+    //     // console.log(secret); doen't run
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner ", username);
+    //     }
+    //     function innerTwo (){
+    //         console.log("innerTwo ", username);
+    //         // console.log(secret);
+
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // console.log("too outer", username);
+
+
+
+</script>
+<script>
+    // closure (pura scope he return hota hii)
+    
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+
+    document.getElementById("orange").onclick = function () {
+        document.body.style.backgroundColor = 'orange'
+    }
+
+    document.getElementById("green").onclick = function () {
+        document.body.style.backgroundColor = 'green'
+    }
+
+
+    // ex. of closure 
+    function clickHandaler(color) {
+        // document.body.style.backgroundColor = `${color}`
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick =clickHandaler("orange")
+    document.getElementById('green').onclick =clickHandaler("green")
+
+</script>
+
+</html>

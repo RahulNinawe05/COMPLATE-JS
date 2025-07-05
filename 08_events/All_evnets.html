@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 🔹 Keyboard Events -->
+    <input type="text" id="inputBox" placeholder="Type something..." />
+    <p id="output"></p>
+
+</body>
+<script>
+    // //////🔹 Keyboard Events
+    const input = document.getElementById('inputBox')
+    const output = document.getElementById('output')
+
+    // Triggered when a key is pressed down (even if held.)
+    // input.addEventListener('keydown', (e)=>{
+    // output.textContent= `key Down: ${e.key}`
+    // });  
+
+
+    // ************Triggered when the key is released
+    // input.addEventListener("keyup", (e) => {
+    //   output.textContent = `Key Up: ${e.key}`;
+    // }); 
+
+
+    // input.addEventListener('keydown', (e)=> {
+    //     output.textContent= `key down: ${e.key}`
+    //     if(e.key === "Enter"){
+    //         alert("you click Enter Button")
+    //     }
+    // })
+
+    // input.addEventListener('keydown', (e) => {
+    //     if (e.key === "a") {
+    //         e.preventDefault()
+    //         output.textContent = `"a" is blocked!`;
+    //     }
+    // })
+
+
+    input.addEventListener("keydown", (e) => {
+        console.log(`Key: ${e.key}, Code: ${e.code}, Ctrl: ${e.ctrlKey}`);
+    });
+
+
+</script>
+
+</html>
+

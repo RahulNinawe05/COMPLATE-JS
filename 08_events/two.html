@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: rgb(230, 232, 234);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rahul</h1>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+   /*  setTimeout is ake perticular time tak rahega ex (2000(2sec), 3000(3sec), ...)   */
+    // setTimeout(function () {
+    //     console.log("Rahul");
+    // }, 2000)
+
+
+    /*  setInterval continue rahega ex (2000(2sec), 3000(3sec), ...)   */
+    // setInterval(function () {
+    //     console.log("Ninawe");
+    // }, 3000)
+
+
+    const sayRahul = function () {
+        console.log("Rahul");
+    }
+    const changtext = function () {
+        const h1 = document.querySelector('h1')
+        h1.innerHTML = "best Js seris"
+        h1.style.color = "yellow"
+        console.log(h1);
+    }
+    // setTimeout(rahul(), 2000) // this is execute of this line use () is this 
+    const changeMe = setTimeout(changtext, 5000)
+    // setTimeout(changtext, 5000)
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(changeMe) //all of this clear 
+        console.log("stop");
+
+    })
+
+</script>
+
+</html>

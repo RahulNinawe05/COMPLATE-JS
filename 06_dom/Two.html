@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+</head>
+
+<body style="background-color: rgba(15, 11, 11, 0.995); color: white;">
+    <div class="parent">
+        <!-- this is check it nodes (are change 9 to 11 only one resonn They are "this") -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thurday</div>
+    </div>
+</body>
+<script>
+
+
+
+    // // PRACTICE 
+    // const parent = document.querySelector(".parent")
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1]);
+    // console.log(parent.children[1].innerHTML="Rahul");
+    // console.log(parent.children[2].style.color = "red");
+    // console.log(parent.style.padding= "45px");
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    // console.log(parent.firstElementChild.innerHTML= "toDay");
+    // *********************************
+
+    /*.querySelector() is a method that selects 
+    the first element in the document that matches a CSS selector.
+    */
+    // const parent = document.querySelector(".parent")
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1]);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    // parent.children[1].style.color= "red"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // practice
+
+    const dayone = document.querySelector(".day")
+    console.log(dayone);
+    console.log(dayone.parentElement);// same
+    console.log(dayone.parentNode); // same
+    console.log(dayone.nextSibling);
+    
+
+
+
+    // *****************************
+    // const dayOne = document.querySelector(".day")
+    // console.log(dayOne);
+    // console.log(dayOne.nextSibling);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+</script>
+
+</html>
